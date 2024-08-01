@@ -4,7 +4,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 export default function SkeletonLoader() {
   return (
-    <div className="flex flex-col gap-4 min-w-[800px] min-h-[400px] mt-10">
+    <div className="mt-5 bg-gray-950 p-3 rounded-xl min-w-[600px] min-h-[300px]">
       {Array.from({ length: 5 }).map((_, index) => (
         <div key={index} className="flex items-center  gap-4 p-2 border-b">
           <Skeleton className="w-48 h-6" />
