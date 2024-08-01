@@ -17,15 +17,15 @@ export default function FileList({ files, onRename, onDelete }) {
   }
 
   return (
-    <div className="mt-10 bg-gray-950 p-3 rounded-xl min-w-[800px] min-h-[400px]">
+    <div className="mt-5 bg-gray-950 p-3 rounded-xl min-w-[600px] min-h-[300px]">
       {files.length === 0 ? (
-        <p className="text-xl text-gray-100 my-5">No files uploaded</p>
+        <p className="text-xl text-gray-100 my-3">No files uploaded</p>
       ) : (
         <ul className="flex flex-col ">
           {files.map((file, index) => (
             <li
               key={index}
-              className="flex items-center gap-[15px] my-1 text-xl text-gray-100 p-2 border-b"
+              className="flex items-center gap-[10px] my-1 text-lg text-gray-100 p-1 border-b"
             >
               <a
                 href={`/api/files/${file.name}`}
@@ -35,10 +35,10 @@ export default function FileList({ files, onRename, onDelete }) {
                 {file.name}
               </a>
               <button onClick={() => onRename(file)} className="p-1">
-                <PencilIcon className="h-6 w-6 text-gray-100" />
+                <PencilIcon className="h-5 w-5 text-gray-100" />
               </button>
               <button onClick={() => onDelete(file)} className="p-1">
-                <TrashIcon className="h-6 w-6 text-red-600" />
+                <TrashIcon className="h-5 w-5 text-red-600" />
               </button>
             </li>
           ))}

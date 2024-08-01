@@ -13,12 +13,12 @@ export default function Modal({ onClose, onSave, initialName }) {
   return (
     <div className="fixed inset-0  flex items-center justify-center bg-gray-900 bg-opacity-50">
       <div className="bg-gray-500 w-[50%] p-10 rounded shadow-lg">
-        <h2 className="text-2xl mb-4 ">Rename File</h2>
+        <h2 className="text-lg mb-4 ">Rename File</h2>
         <input
           type="text"
           value={newName}
           onChange={(e) => setNewName(e.target.value)}
-          className="border p-2 mb-4 w-full text-black text-2xl"
+          className="border p-2 mb-4 w-full text-black text-lg"
         />
         <div className="flex justify-end gap-4">
           <button

@@ -114,11 +114,11 @@ export default function UploadButton() {
   );
 
   return (
-    <div className="bg-gray-600 p-5 rounded-xl">
+    <div className="bg-gray-600 p-3 rounded-xl">
       {toastAlert && (
         <div className="w-[50%] absolute flex justify-center items-center transition-opacity ">
           <Alert className="w-[50%] border-red-800 bg-red-500 text-gray-100 font-bold">
-            <Terminal className="h-4 w-4 mt-[200px]" />
+            <Terminal className="h-4 w-4 mt-[150px]" />
             <AlertTitle className="text-2xl">
               The file is very large!
             </AlertTitle>
@@ -128,9 +128,9 @@ export default function UploadButton() {
           </Alert>
         </div>
       )}
-      <div className="w-full max-w-sm items-center mt-10 justify-center">
+      <div className="w-full max-w-sm items-center mt-5 justify-center">
         <Input
-          className="bg-gray-400 py-2 text-lg font-bold"
+          className="bg-gray-400 py-2 text-md font-bold"
           type="file"
           onChange={handleFileChange}
         />
@@ -154,7 +154,7 @@ export default function UploadButton() {
           initialName={renameFile?.name}
         />
       )}
-      <Pagination className={"mt-10 text-gray-100 text-2xl min-w-[350px]"}>
+      <Pagination className={"mt-10 text-gray-100 text-lg min-w-[350px]"}>
         <PaginationContent
           className={
             "bg-gray-500 rounded px-10 py-2 flex justify-center items-center min-w-[450px]"
